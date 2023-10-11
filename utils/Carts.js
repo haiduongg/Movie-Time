@@ -3,17 +3,13 @@ const checkout = document.getElementById('icon');
 const deleteButton = document.getElementById('delete');
 console.log(films);
 
-function handleDelete(index) {
+function deleteCart(index) {
   let news = films.splice(index - 1, 1);
   alert('Delete Successfully');
-  // localStorage.setItem('Carts', JSON.stringify(news));
-  // let films = JSON.parse(localStorage.getItem('Carts'));
   RenderCarts(news);
 }
 
 function changeQuantity(index, quantity) {
-  const getQuantity = document.querySelectorAll('#quantity');
-  console.log(getQuantity);
   films[index].quantity = quantity;
   RenderCarts(films);
 }
@@ -54,13 +50,14 @@ function RenderCarts(films) {
                       <p>${new Intl.NumberFormat().format(
                         film.quantity * film.price
                       )}đ</p>
-                      <i id="delete" class='bx bxs-x-square' onclick="handleDelete(${index})"></i>
+                      <i id="delete" class='bx bxs-x-square' onclick="deleteCart(${index})"></i>
                     </div>
                   </div>`;
   });
   document.getElementById('list').innerHTML = element;
   document.getElementById('sum').innerHTML =
     new Intl.NumberFormat().format(total) + 'đ';
+  localStorage.setItem('Carts', JSON.stringify(films));
 }
 RenderCarts(films);
 
