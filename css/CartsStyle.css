@@ -175,6 +175,18 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .container {
   max-width: 100%;
   margin: 0 auto;
@@ -396,8 +408,8 @@ header nav .header__inner-navigation #login:hover {
 }
 .carts__inner-table-body #quantity {
   border: none;
-  width: 80px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   font-size: 25px;
   border-radius: 10px;
   padding-inline: 15px;
@@ -406,6 +418,36 @@ header nav .header__inner-navigation #login:hover {
 .carts__inner-table-body #quantity:focus {
   outline: 2px solid #854c53;
   outline-offset: 0.5px;
+}
+.carts__inner-table-body .quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-wrap: nowrap;
+  gap: 10px;
+}
+.carts__inner-table-body .changeQuantityButton {
+  cursor: pointer;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-wrap: nowrap;
+  background-color: #a96a71;
+}
+.carts__inner-table-body .changeQuantityButton:hover {
+  opacity: 0.7;
+  transition: 0.2s;
+}
+.carts__inner-table-body .changeQuantityButton:active {
+  outline: 2px solid #854c53;
+  outline-offset: 2px;
+  transition: 0.2s;
 }
 .carts__inner-table-footer {
   margin-top: 30px;

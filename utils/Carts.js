@@ -11,9 +11,11 @@ function handleDelete(index) {
   RenderCarts(news);
 }
 
-function handleChangeQuantity(index) {
+function changeQuantity(index, quantity) {
   const getQuantity = document.querySelectorAll('#quantity');
   console.log(getQuantity);
+  films[index].quantity = quantity;
+  RenderCarts(films);
 }
 
 function RenderCarts(films) {
@@ -30,13 +32,23 @@ function RenderCarts(films) {
                     <p class='film-name'>${film.name}</p>
                     <p>${new Intl.NumberFormat().format(film.price)}đ</p>
                     <div class="quantity">
+                      <button class='changeQuantityButton' onclick="changeQuantity(${index}, ${
+      film.quantity - 1
+    })">
+                        <p>-</p>
+                      </button>
                       <input
                         type="number"
                         name="Quantity"
                         id="quantity"
                         value=${film.quantity}
-                        onchange="handleChangeQuantity(${index})"
+                        onchange="changeQuantity(${index}, ${film.quantity})"
                       />
+                      <button class='changeQuantityButton' onclick="changeQuantity(${index}, ${
+      film.quantity + 1
+    })">
+                        <p>+</p>
+                      </button>
                     </div>
                     <div class="films-item-total">
                       <p>${new Intl.NumberFormat().format(
