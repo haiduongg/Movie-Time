@@ -1,0 +1,92 @@
+@import '../../scss/base';
+@import '../../scss/variables';
+@import '../../scss/responsive';
+
+.container {
+  width: 30%;
+  margin-top: 70px;
+}
+
+.wrapper {
+  position: relative;
+  padding-top: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+}
+
+#back {
+  border-radius: 5px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 30px;
+  height: 30px;
+  background-color: $clr-primary;
+  color: $clr-bg;
+  cursor: pointer;
+  @include flex(center, center);
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  color: $clr-primary;
+}
+form {
+  padding: 0 50px 30px 50px;
+  margin-top: 50px;
+  border-radius: 20px;
+  .form__inner {
+    & label {
+      font-size: 18px;
+      display: block;
+      margin-top: 20px;
+    }
+    & input {
+      width: 100%;
+      height: 50px;
+      border: none;
+      padding-left: 20px;
+      font-size: 15px;
+      margin-top: 10px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      border-bottom: 3px solid transparent;
+      transition: 0.2s;
+      &:focus {
+        outline: none;
+        transition: 0.2s;
+        border-bottom: 3px solid $clr-primary;
+      }
+    }
+    #signup {
+      border-radius: 10px;
+      width: 150px;
+      height: 50px;
+      margin: 30px auto;
+      @include flex(center, center);
+      cursor: pointer;
+      background-color: $clr-primary;
+      border: 2px solid transparent;
+      font-size: 20px;
+      color: $clr-bg;
+      transition: 0.2s;
+      &:hover {
+        transition: 0.2s;
+        border: 2px solid $clr-primary;
+        color: $clr-primary;
+        background-color: transparent;
+      }
+    }
+    #login {
+      & p {
+        & a {
+          transition: 0.2s;
+          &:hover {
+            color: $clr-primary !important;
+            transition: 0.2s;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../../img/favicon.png"
+      type="image/x-icon"
+    />
+    <title>Movie Time | Original Cinema Website</title>
+    <link rel="stylesheet" href="../../css/CartsStyle.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <!-- Header -->
+      <header class="header">
+        <nav>
+          <div class="container header__inner">
+            <div class="header__inner-logo">
+              <a href="../../index.html"
+                ><img src="../../img/header__logo.png" alt="Movie Time Logo"
+              /></a>
+            </div>
+
+            <div class="header__inner-search">
+              <i class="bx bx-search"></i>
+              <input type="text" name="search" placeholder="Search..." />
+            </div>
+
+            <div class="header__inner-navigation">
+              <ul class="header__inner-navigation-menu">
+                <li><a href="/">Trang chủ</a></li>
+                <li><a href="/products">Lịch chiếu phim</a></li>
+                <li><a href="/about">Về chúng tôi</a></li>
+                <li><a href="/pages">Pages</a></li>
+              </ul>
+
+              <ul class="header__inner-navigation-cart">
+                <li><a href="/orders">My Orders</a></li>
+                <li><a href="./views/Carts/Carts.html">Giỏ hàng</a></li>
+              </ul>
+
+              <div id="login">
+                <a href="./views/Login/Login.html">
+                  <i class="bx bx-user"></i>Login
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- Main -->
+      <main>
+        <div class="carts">
+          <div class="container carts__inner">
+            <h1>Giỏ hàng của bạn</h1>
+            <div class="carts__inner-table" style="position: relative">
+              <div class="carts__inner-table-heading grid">
+                <p>ID</p>
+                <p>Image</p>
+                <p>Name</p>
+                <p>Price</p>
+                <p>Quantity</p>
+                <p>Total</p>
+              </div>
+              <div class="carts__inner-table-body">
+                <div id="list"></div>
+              </div>
+              <div
+                class="carts__inner-table-footer"
+                style="position: fixed; bottom: 15px; width: 90vw"
+              >
+                <div class="grid">
+                  <p class="checkout">Checkout</p>
+                  <p id="sum">0</p>
+                  <button id="icon">
+                    <i class="bx bx-cart-download" style="font-size: 50px"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- Footer -->
+      <footer>
+        <div class="container footer__inner">
+          <div class="copyright">
+            <h2>
+              Movie
+              <p>Time</p>
+            </h2>
+            <p>Copyright © 2023</p>
+            <p>Movie Time | Original Cinema Website</p>
+          </div>
+          <div class="action">
+            <div class="info">
+              <div class="row">
+                <a href="/about">Giới thiệu</a>
+                <a href="/contact">Liên hệ</a>
+                <a href="/">Điều khoản</a>
+              </div>
+              <div class="row">
+                <a href="/faq">F.A.Q</a>
+                <a href="/ads">Liên hệ quảng cáo</a>
+              </div>
+            </div>
+            <div class="btn-contact">
+              <a href="#"><button>Contact Us</button></a>
+            </div>
+            <div class="call">
+              <p><b>Give us a Call</b>(+84) 123-456-789</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../../utils/Carts.js"></script>
+  </body>
+</html>

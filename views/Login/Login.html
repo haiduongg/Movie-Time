@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../../img/favicon.png"
+      type="image/x-icon"
+    />
+    <title>Login | Movie Time</title>
+    <link rel="stylesheet" href="../../css/LoginStyle.css" />
+  </head>
+  <body>
+    <div class="container wrapper">
+      <div id="back">
+        <a href="../../index.html"><i class="bx bxs-left-arrow"></i></a>
+      </div>
+      <h1>Login</h1>
+      <form>
+        <div class="form__inner">
+          <label for="email"> Email </label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Type your email"
+            id="email"
+          />
+          <label for="password"> Password </label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Type your password"
+            id="password"
+          />
+          <input type="button" id="login" value="Login" />
+          <div id="signup">
+            <p>
+              Create your account? <a href="../SignUp/SignUp.html">Signup</a>
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="../../utils/Login.js"></script>
+  </body>
+</html>

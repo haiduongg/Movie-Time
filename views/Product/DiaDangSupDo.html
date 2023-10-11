@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../../img/favicon.png"
+      type="image/x-icon"
+    />
+    <title>Movie Time | Original Cinema Website</title>
+    <link rel="stylesheet" href="../../css/ProductStyle.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <!-- Header -->
+      <header class="header">
+        <nav>
+          <div class="container header__inner">
+            <div class="header__inner-logo">
+              <a href="../../index.html"
+                ><img src="../../img/header__logo.png" alt="Movie Time Logo"
+              /></a>
+            </div>
+
+            <div class="header__inner-search">
+              <i class="bx bx-search"></i>
+              <input type="text" name="search" placeholder="Search..." />
+            </div>
+
+            <div class="header__inner-navigation">
+              <ul class="header__inner-navigation-menu">
+                <li><a href="/home">Trang chủ</a></li>
+                <li><a href="/products">Lịch chiếu phim</a></li>
+                <li><a href="about">Về chúng tôi</a></li>
+                <li><a href="pages">Pages</a></li>
+              </ul>
+
+              <ul class="header__inner-navigation-cart">
+                <li><a href="/orders">My Orders</a></li>
+                <li><a href="../Carts/Carts.html">Giỏ hàng</a></li>
+              </ul>
+
+              <div id="login">
+                <a href="../Login/Login.html">
+                  <i class="bx bx-user"></i>Login
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- Main -->
+      <main>
+        <div class="product container">
+          <div class="heading">
+            <p>
+              <a href="../../index.html" id="to-home">Home</a>
+              <i class="bx bx-chevron-right"></i>
+              <a href="/"> Địa Đàng Sụp Đổ </a>
+            </p>
+          </div>
+          <section id="product">
+            <div class="product__inner">
+              <div class="product__inner-image">
+                <img
+                  src="../../img/posters/DiaDangSupDo.jpg"
+                  alt="Địa Đàng Sụp Đổ"
+                />
+              </div>
+              <div class="product__inner-desc">
+                <h1 class="product__inner-desc-heading">Địa Đàng Sụp Đổ</h1>
+                <p class="product__inner-desc-desc">
+                  Được nhận xét là một “chuẩn mực mới về phản địa đàng trong
+                  dòng phim thảm họa Hàn Quốc”, bom tấn ĐỊA ĐÀNG SỤP ĐỔ xoay
+                  quanh cơn đại địa chấn san bằng Seoul thành bình địa và hành
+                  trình sinh tồn của những người sống sót.
+                </p>
+                <div class="product__inner-desc-others">
+                  <p><strong>Đạo diễn:</strong> Um Tae Hwa</p>
+                  <p>
+                    <strong>Diễn viên:</strong> Lee Byung Hun, Park Seo Joon,
+                    Park Bo Young, Park Ji Hoo, Kim Sun Young, Kim Do Yoon,…
+                  </p>
+                  <p><strong>Thể loại: </strong> Hành động, Hồi hộp, Ly kì</p>
+                  <p><strong>Thời lượng: </strong> 129 phút</p>
+                  <p><strong>Ngôn ngữ:</strong> Tiếng Hàn</p>
+                  <p><strong>Ngày khởi chiếu:</strong> 01/09/2023</p>
+                </div>
+                <button id="buy">Mua vé</button>
+              </div>
+            </div>
+          </section>
+        </div>
+        <section id="trailer">
+          <h1 class="heading">Trailer</h1>
+          <div class="video-frame">
+            <iframe
+              width="830"
+              height="490"
+              src="https://www.youtube.com/embed/xKhjLEAoiys?si=1nIGjKj1HM71WxKa"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </section>
+      </main>
+      <!-- Footer -->
+      <footer>
+        <div class="container footer__inner">
+          <div class="copyright">
+            <h2>
+              Movie
+              <p>Time</p>
+            </h2>
+            <p>Copyright © 2023</p>
+            <p>Movie Time | Original Cinema Website</p>
+          </div>
+          <div class="action">
+            <div class="info">
+              <div class="row">
+                <a href="/about">Giới thiệu</a>
+                <a href="/contact">Liên hệ</a>
+                <a href="/">Điều khoản</a>
+              </div>
+              <div class="row">
+                <a href="/faq">F.A.Q</a>
+                <a href="/ads">Liên hệ quảng cáo</a>
+              </div>
+            </div>
+            <div class="btn-contact">
+              <a href="#"><button>Contact Us</button></a>
+            </div>
+            <div class="call">
+              <p><b>Give us a Call</b>(+84) 123-456-789</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../../utils/AddCarts.js"></script>
+  </body>
+</html>

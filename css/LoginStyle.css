@@ -1,0 +1,310 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18.72px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 13.28px;
+}
+
+h6 {
+  font-size: 10.72px;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+i {
+  font-size: 20px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+.container {
+  width: 25%;
+  margin-top: 200px;
+}
+
+.wrapper {
+  position: relative;
+  padding-top: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+}
+
+#back {
+  border-radius: 5px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 30px;
+  height: 30px;
+  background-color: #a96a71;
+  color: #f8f8f8;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-wrap: nowrap;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  color: #a96a71;
+}
+
+form {
+  padding: 0 50px 30px 50px;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+form .form__inner label {
+  font-size: 18px;
+  display: block;
+  margin-top: 20px;
+}
+form .form__inner input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  padding-left: 20px;
+  font-size: 15px;
+  margin-top: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-bottom: 3px solid transparent;
+  transition: 0.2s;
+}
+form .form__inner input:focus {
+  outline: none;
+  transition: 0.2s;
+  border-bottom: 3px solid #a96a71;
+}
+form .form__inner #login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-wrap: nowrap;
+  border-radius: 10px;
+  width: 150px;
+  height: 50px;
+  margin: 30px auto;
+  cursor: pointer;
+  background-color: #a96a71;
+  border: 2px solid transparent;
+  font-size: 20px;
+  color: #f8f8f8;
+  transition: 0.2s;
+}
+form .form__inner #login:hover {
+  transition: 0.2s;
+  border: 2px solid #a96a71;
+  color: #a96a71;
+  background-color: transparent;
+}
+form .form__inner #signup p a {
+  transition: 0.2s;
+}
+form .form__inner #signup p a:hover {
+  color: #a96a71 !important;
+  transition: 0.2s;
+}
+
+/*# sourceMappingURL=LoginStyle.css.map */
