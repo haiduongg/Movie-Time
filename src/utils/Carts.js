@@ -31,7 +31,7 @@ function RenderCarts(films) {
     element += `
     <div class="films-item grid">
                     <p class="id-film">${film.id}</p>
-                    <img src=${film.image} alt=${film.name} />
+                    <img src='${film.image}' alt=${film.name} />
                     <p class='film-name'>${film.name}</p>
                     <p>${new Intl.NumberFormat().format(film.price)}đ</p>
                     <div class="quantity">
