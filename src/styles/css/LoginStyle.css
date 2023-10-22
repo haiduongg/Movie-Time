@@ -301,9 +301,10 @@ form .form__inner #login:hover {
 }
 form .form__inner #signup p a {
   transition: 0.2s;
+  color: #a96a71;
 }
 form .form__inner #signup p a:hover {
-  color: #a96a71 !important;
+  border-bottom: 1px solid #a96a71;
   transition: 0.2s;
 }
 

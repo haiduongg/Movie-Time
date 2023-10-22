@@ -1,10 +1,10 @@
-@import '../../scss/base';
-@import '../../scss/variables';
-@import '../../scss/responsive';
+@import 'base';
+@import 'variables';
+@import 'responsive';
 
 .container {
-  width: 25%;
-  margin-top: 200px;
+  width: 30%;
+  margin-top: 70px;
 }
 
 .wrapper {
@@ -58,12 +58,12 @@ form {
         border-bottom: 3px solid $clr-primary;
       }
     }
-    #login {
-      @include flex(center, center);
+    #signup {
       border-radius: 10px;
       width: 150px;
       height: 50px;
       margin: 30px auto;
+      @include flex(center, center);
       cursor: pointer;
       background-color: $clr-primary;
       border: 2px solid transparent;
@@ -77,12 +77,13 @@ form {
         background-color: transparent;
       }
     }
-    #signup {
+    #login {
       & p {
         & a {
           transition: 0.2s;
+          color: $clr-primary;
           &:hover {
-            color: $clr-primary !important;
+            border-bottom: 1px solid $clr-primary;
             transition: 0.2s;
           }
         }
