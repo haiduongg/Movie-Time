@@ -1,3 +1,5 @@
+@import 'variables';
+
 html,
 body,
 div,
@@ -157,6 +159,49 @@ i {
 }
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.changeBackground {
+  background-color: $clr-primary !important;
+  color: $clr-bg !important;
+  & nav {
+    .header__inner {
+      &-search {
+        & i {
+          color: $clr-primary;
+        }
+        & input {
+          border: 1px solid $clr-border;
+        }
+      }
+      &-navigation {
+        color: $clr-bg;
+        &-menu {
+          & li {
+            & a {
+              color: $clr-bg;
+              &:hover {
+                color: $clr-border;
+              }
+            }
+          }
+        }
+        &-cart {
+          & li {
+            & a {
+              color: $clr-bg;
+              &:hover {
+                color: $clr-border;
+              }
+            }
+            &:last-child {
+              border-left: 1px solid $clr-border;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @mixin flex($justify: center, $align: center, $wrap: nowrap) {

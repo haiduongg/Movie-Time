@@ -27,8 +27,9 @@ header {
   height: 73px;
   z-index: 999;
   width: 100%;
-  background-color: $clr-primary;
+  background-color: transparent;
   box-shadow: $box-shadow;
+  font-weight: 500;
   & nav {
     padding: 5px 20px;
     .header__inner {
@@ -64,7 +65,7 @@ header {
         }
       }
       &-navigation {
-        color: $clr-bg;
+        color: $clr-text;
         @include flex(center, center);
         &-menu {
           @include flex(center, center);
@@ -76,7 +77,7 @@ header {
               transition: 0.2s;
               &:hover {
                 transition: 0.2s;
-                color: $clr-second;
+                color: $clr-primary;
               }
             }
             &:first-child {
@@ -93,12 +94,12 @@ header {
               display: block;
               transition: 0.2s;
               &:hover {
-                color: $clr-second;
+                color: $clr-primary;
                 transition: 0.2s;
               }
             }
             &:last-child {
-              border-left: 1px solid $clr-bg;
+              border-left: 1px solid $clr-border;
             }
           }
         }

@@ -175,6 +175,35 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+.changeBackground {
+  background-color: #a96a71 !important;
+  color: #f8f8f8 !important;
+}
+.changeBackground nav .header__inner-search i {
+  color: #a96a71;
+}
+.changeBackground nav .header__inner-search input {
+  border: 1px solid #cfcfcf;
+}
+.changeBackground nav .header__inner-navigation {
+  color: #f8f8f8;
+}
+.changeBackground nav .header__inner-navigation-menu li a {
+  color: #f8f8f8;
+}
+.changeBackground nav .header__inner-navigation-menu li a:hover {
+  color: #cfcfcf;
+}
+.changeBackground nav .header__inner-navigation-cart li a {
+  color: #f8f8f8;
+}
+.changeBackground nav .header__inner-navigation-cart li a:hover {
+  color: #cfcfcf;
+}
+.changeBackground nav .header__inner-navigation-cart li:last-child {
+  border-left: 1px solid #cfcfcf;
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -242,8 +271,9 @@ header {
   height: 73px;
   z-index: 999;
   width: 100%;
-  background-color: #a96a71;
-  box-shadow: rgba(116, 116, 116, 0.16) 0px 3px 6px, rgba(116, 116, 116, 0.16) 0px 3px 6px;
+  background-color: transparent;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-weight: 500;
 }
 header nav {
   padding: 5px 20px;
@@ -286,7 +316,7 @@ header nav .header__inner-search input::placeholder {
   color: #cfcfcf;
 }
 header nav .header__inner-navigation {
-  color: #f8f8f8;
+  color: #5d6673;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -306,7 +336,7 @@ header nav .header__inner-navigation-menu li a {
 }
 header nav .header__inner-navigation-menu li a:hover {
   transition: 0.2s;
-  color: #dcd9c1;
+  color: #a96a71;
 }
 header nav .header__inner-navigation-menu li:first-child {
   margin-left: 0;
@@ -326,11 +356,11 @@ header nav .header__inner-navigation-cart li a {
   transition: 0.2s;
 }
 header nav .header__inner-navigation-cart li a:hover {
-  color: #dcd9c1;
+  color: #a96a71;
   transition: 0.2s;
 }
 header nav .header__inner-navigation-cart li:last-child {
-  border-left: 1px solid #f8f8f8;
+  border-left: 1px solid #cfcfcf;
 }
 header nav .header__inner-navigation #login {
   width: 115px;
@@ -369,7 +399,7 @@ main aside .aside__inner-outstanding {
   grid-column: span 1;
   background-color: #f9fafb;
   border-radius: 10px;
-  box-shadow: rgba(116, 116, 116, 0.16) 0px 3px 6px, rgba(116, 116, 116, 0.16) 0px 3px 6px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   height: 445px;
   padding: 20px;
 }
@@ -396,7 +426,7 @@ main aside .aside__inner-outstanding ul li:hover {
   transition: 0.2s;
 }
 main aside .aside__inner-banner {
-  box-shadow: rgba(116, 116, 116, 0.16) 0px 3px 6px, rgba(116, 116, 116, 0.16) 0px 3px 6px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   grid-column: span 4;
   height: 445px;
   border-radius: 10px;
