@@ -161,6 +161,13 @@ body {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+@mixin flex($justify: center, $align: center, $wrap: nowrap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  word-wrap: $wrap;
+}
+
 .changeBackground {
   background-color: $clr-primary !important;
   color: $clr-bg !important;
@@ -199,17 +206,42 @@ body {
             }
           }
         }
+        &-personal {
+          position: relative;
+          &-trigger {
+            cursor: pointer;
+            margin-left: 30px;
+            @include flex(center, center);
+            padding-block: 10px;
+            &-avatar {
+              border-radius: 50%;
+              margin-right: 10px;
+            }
+          }
+          &-dropdown {
+            color: $clr-text;
+            position: absolute;
+            border-radius: 10px;
+            top: 100%;
+            left: 30px;
+            width: 200px;
+            background-color: white;
+            box-shadow: $box-shadow;
+            & ul {
+              font-size: 17px;
+              padding: 15px 0 20px 20px;
+              & > li {
+                cursor: pointer;
+                padding: 10px;
+              }
+            }
+          }
+        }
       }
     }
   }
 }
 
-@mixin flex($justify: center, $align: center, $wrap: nowrap) {
-  display: flex;
-  justify-content: $justify;
-  align-items: $align;
-  word-wrap: $wrap;
-}
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

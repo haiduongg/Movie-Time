@@ -28,6 +28,7 @@ signup.addEventListener('click', () => {
     alert('Please input phone again');
   } else {
     alert('Signup Successfully');
+    window.location = '../views/Login.html';
     let newUser = new Customer(id, username, email, phoneNumber, password);
     userData.push(newUser);
     localStorage.setItem('userData', JSON.stringify(userData));

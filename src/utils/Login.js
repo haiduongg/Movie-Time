@@ -1,21 +1,27 @@
 let login = document.getElementById('login');
-let get = localStorage.getItem('userData') || [];
-let userData = JSON.parse(get);
-
-// console.log(userData);
+let userData = JSON.parse(localStorage.getItem('userData')) ?? [];
+let isLogin = JSON.parse(localStorage.getItem('isLogin')) ?? false;
 
 login.addEventListener('click', () => {
   let email = document.getElementById('email').value;
   let password = document.getElementById('password').value;
-  let flag = false;
 
   userData.forEach((item) => {
-    if (item.email === email) {
-      if (item.password === password) {
-        flag = true;
-        console.log(item);
-      }
+    if (item.email !== email) {
+      alert(
+        'Email chưa được đăng ký. Nhấn "OK" để điều hướng tới trang đăng ký'
+      );
+      window.location = './Signup.html';
+    }
+    if (item.password !== password) {
+      alert('Mật khẩu không chính xác');
+    }
+    if (item.email === email && item.password === password) {
+      alert('Đăng nhập thành công');
+      window.location = '/';
+      isLogin = JSON.stringify(localStorage.setItem('isLogin', true));
+    } else {
+      ('Đăng nhập thất bại');
     }
   });
-  flag ? alert('Login Successly') : alert('Login Failded');
 });

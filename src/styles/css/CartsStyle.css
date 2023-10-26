@@ -175,6 +175,69 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+.changeBackground {
+  background-color: #a96a71 !important;
+  color: #f8f8f8 !important;
+}
+.changeBackground nav .header__inner-search i {
+  color: #a96a71;
+}
+.changeBackground nav .header__inner-search input {
+  border: 1px solid #cfcfcf;
+}
+.changeBackground nav .header__inner-navigation {
+  color: #f8f8f8;
+}
+.changeBackground nav .header__inner-navigation-menu li a {
+  color: #f8f8f8;
+}
+.changeBackground nav .header__inner-navigation-menu li a:hover {
+  color: #cfcfcf;
+}
+.changeBackground nav .header__inner-navigation-cart li a {
+  color: #f8f8f8;
+}
+.changeBackground nav .header__inner-navigation-cart li a:hover {
+  color: #cfcfcf;
+}
+.changeBackground nav .header__inner-navigation-cart li:last-child {
+  border-left: 1px solid #cfcfcf;
+}
+.changeBackground nav .header__inner-navigation-personal {
+  position: relative;
+}
+.changeBackground nav .header__inner-navigation-personal-trigger {
+  cursor: pointer;
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-wrap: nowrap;
+  padding-block: 10px;
+}
+.changeBackground nav .header__inner-navigation-personal-trigger-avatar {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.changeBackground nav .header__inner-navigation-personal-dropdown {
+  color: #5d6673;
+  position: absolute;
+  border-radius: 10px;
+  top: 100%;
+  left: 30px;
+  width: 200px;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.changeBackground nav .header__inner-navigation-personal-dropdown ul {
+  font-size: 17px;
+  padding: 15px 0 20px 20px;
+}
+.changeBackground nav .header__inner-navigation-personal-dropdown ul > li {
+  cursor: pointer;
+  padding: 10px;
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -237,8 +300,9 @@ header {
   height: 73px;
   z-index: 999;
   width: 100%;
-  background-color: #f9fafb;
-  box-shadow: rgba(116, 116, 116, 0.16) 0px 3px 6px, rgba(116, 116, 116, 0.16) 0px 3px 6px;
+  background-color: transparent;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-weight: 500;
 }
 header nav {
   padding: 5px 20px;
@@ -281,6 +345,7 @@ header nav .header__inner-search input::placeholder {
   color: #cfcfcf;
 }
 header nav .header__inner-navigation {
+  color: #5d6673;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -324,9 +389,54 @@ header nav .header__inner-navigation-cart li a:hover {
   transition: 0.2s;
 }
 header nav .header__inner-navigation-cart li:last-child {
-  border-left: 1px solid #5d6673;
+  border-left: 1px solid #cfcfcf;
 }
-header nav .header__inner-navigation #login {
+header nav .header__inner-navigation-personal {
+  position: relative;
+}
+header nav .header__inner-navigation-personal:hover .header__inner-navigation-personal-dropdown {
+  display: block;
+}
+header nav .header__inner-navigation-personal-trigger {
+  cursor: pointer;
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-wrap: nowrap;
+  padding-block: 10px;
+}
+header nav .header__inner-navigation-personal-trigger-avatar {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+header nav .header__inner-navigation-personal-dropdown {
+  display: none;
+  position: absolute;
+  border-radius: 10px;
+  top: 100%;
+  left: 30px;
+  width: 200px;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+header nav .header__inner-navigation-personal-dropdown ul {
+  font-size: 17px;
+  padding: 15px 0 20px 20px;
+}
+header nav .header__inner-navigation-personal-dropdown ul > li {
+  cursor: pointer;
+  padding: 10px;
+}
+header nav .header__inner-navigation .action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-wrap: nowrap;
+  margin-left: 40px;
+  gap: 10px;
+}
+header nav .header__inner-navigation .action .button {
   width: 115px;
   height: 45px;
   border: 1px solid #cfcfcf;
@@ -338,11 +448,11 @@ header nav .header__inner-navigation #login {
   transition: 0.2s;
   cursor: pointer;
 }
-header nav .header__inner-navigation #login a i {
+header nav .header__inner-navigation .action .button a i {
   vertical-align: middle;
   margin-right: 8px;
 }
-header nav .header__inner-navigation #login:hover {
+header nav .header__inner-navigation .action .button:hover {
   transition: 0.2s;
   background-color: #854c53;
   border-color: transparent !important;

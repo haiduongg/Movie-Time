@@ -1,0 +1,146 @@
+header {
+  position: fixed;
+  top: 0;
+  height: 73px;
+  z-index: 999;
+  width: 100%;
+  background-color: transparent;
+  box-shadow: $box-shadow;
+  font-weight: 500;
+  & nav {
+    padding: 5px 20px;
+    .header__inner {
+      @include flex(space-between, center);
+      &-logo {
+        & img {
+          user-select: none;
+          height: 60px;
+        }
+      }
+      &-search {
+        position: relative;
+        margin-left: 40px;
+        @include flex(center, center);
+        & i {
+          cursor: pointer;
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 25%;
+          padding-left: 10px;
+        }
+        & input {
+          padding-left: 37px;
+          width: 248px;
+          height: 38px;
+          border: 1px solid $clr-border;
+          border-radius: 10px;
+          &::placeholder {
+            font-weight: 600;
+            color: $clr-border;
+          }
+        }
+      }
+      &-navigation {
+        color: $clr-text;
+        @include flex(center, center);
+        &-menu {
+          @include flex(center, center);
+          margin-left: 40px;
+          & li {
+            & a {
+              cursor: pointer;
+              margin-left: 32px;
+              transition: 0.2s;
+              &:hover {
+                transition: 0.2s;
+                color: $clr-primary;
+              }
+            }
+            &:first-child {
+              margin-left: 0;
+            }
+          }
+        }
+        &-cart {
+          @include flex(center, center);
+          & li {
+            padding-inline: 56px;
+            & a {
+              cursor: pointer;
+              display: block;
+              transition: 0.2s;
+              &:hover {
+                color: $clr-primary;
+                transition: 0.2s;
+              }
+            }
+            &:last-child {
+              border-left: 1px solid $clr-border;
+            }
+          }
+        }
+        &-personal {
+          position: relative;
+          &:hover .header__inner-navigation-personal-dropdown {
+            display: block;
+          }
+          &-trigger {
+            cursor: pointer;
+            margin-left: 30px;
+            @include flex(center, center);
+            padding-block: 10px;
+            &-avatar {
+              border-radius: 50%;
+              margin-right: 10px;
+            }
+          }
+          &-dropdown {
+            display: none;
+            position: absolute;
+            border-radius: 10px;
+            top: 100%;
+            left: 30px;
+            width: 200px;
+            background-color: white;
+            box-shadow: $box-shadow;
+            & ul {
+              font-size: 17px;
+              padding: 15px 0 20px 20px;
+              & > li {
+                cursor: pointer;
+                padding: 10px;
+              }
+            }
+          }
+        }
+        .action {
+          @include flex(center, center);
+          margin-left: 40px;
+          gap: 10px;
+          .button {
+            width: 115px;
+            height: 45px;
+            border: 1px solid $clr-border;
+            border-radius: 40px;
+            @include flex(center, center);
+            transition: 0.2s;
+            cursor: pointer;
+            & a {
+              & i {
+                vertical-align: middle;
+                margin-right: 8px;
+              }
+            }
+            &:hover {
+              transition: 0.2s;
+              background-color: $clr-accent;
+              border-color: transparent !important;
+              color: $clr-box;
+            }
+          }
+        }
+      }
+    }
+  }
+}

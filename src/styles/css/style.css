@@ -203,6 +203,40 @@ body {
 .changeBackground nav .header__inner-navigation-cart li:last-child {
   border-left: 1px solid #cfcfcf;
 }
+.changeBackground nav .header__inner-navigation-personal {
+  position: relative;
+}
+.changeBackground nav .header__inner-navigation-personal-trigger {
+  cursor: pointer;
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-wrap: nowrap;
+  padding-block: 10px;
+}
+.changeBackground nav .header__inner-navigation-personal-trigger-avatar {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.changeBackground nav .header__inner-navigation-personal-dropdown {
+  color: #5d6673;
+  position: absolute;
+  border-radius: 10px;
+  top: 100%;
+  left: 30px;
+  width: 200px;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.changeBackground nav .header__inner-navigation-personal-dropdown ul {
+  font-size: 17px;
+  padding: 15px 0 20px 20px;
+}
+.changeBackground nav .header__inner-navigation-personal-dropdown ul > li {
+  cursor: pointer;
+  padding: 10px;
+}
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -214,55 +248,6 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
-}
-
-.container {
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1200px;
-  }
-}
-@media (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
-  }
-}
-.container {
-  max-width: 100%;
-  padding-inline: 80px;
-  margin: 0 auto;
-}
-
-.active {
-  display: block;
-}
-
-.tab-active {
-  font-size: 30px;
-  font-weight: 600;
-  color: #a96a71;
-  border-bottom: 3px solid #854c53 !important;
-  color: #854c53;
-  transition: 0.2s;
 }
 
 header {
@@ -362,7 +347,52 @@ header nav .header__inner-navigation-cart li a:hover {
 header nav .header__inner-navigation-cart li:last-child {
   border-left: 1px solid #cfcfcf;
 }
-header nav .header__inner-navigation #login {
+header nav .header__inner-navigation-personal {
+  position: relative;
+}
+header nav .header__inner-navigation-personal:hover .header__inner-navigation-personal-dropdown {
+  display: block;
+}
+header nav .header__inner-navigation-personal-trigger {
+  cursor: pointer;
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-wrap: nowrap;
+  padding-block: 10px;
+}
+header nav .header__inner-navigation-personal-trigger-avatar {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+header nav .header__inner-navigation-personal-dropdown {
+  display: none;
+  position: absolute;
+  border-radius: 10px;
+  top: 100%;
+  left: 30px;
+  width: 200px;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+header nav .header__inner-navigation-personal-dropdown ul {
+  font-size: 17px;
+  padding: 15px 0 20px 20px;
+}
+header nav .header__inner-navigation-personal-dropdown ul > li {
+  cursor: pointer;
+  padding: 10px;
+}
+header nav .header__inner-navigation .action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-wrap: nowrap;
+  margin-left: 40px;
+  gap: 10px;
+}
+header nav .header__inner-navigation .action .button {
   width: 115px;
   height: 45px;
   border: 1px solid #cfcfcf;
@@ -374,15 +404,144 @@ header nav .header__inner-navigation #login {
   transition: 0.2s;
   cursor: pointer;
 }
-header nav .header__inner-navigation #login a i {
+header nav .header__inner-navigation .action .button a i {
   vertical-align: middle;
   margin-right: 8px;
 }
-header nav .header__inner-navigation #login:hover {
+header nav .header__inner-navigation .action .button:hover {
   transition: 0.2s;
   background-color: #854c53;
   border-color: transparent !important;
   color: #f9fafb;
+}
+
+footer {
+  width: 100%;
+  height: 230px;
+  background-color: #f9fafb;
+  border-top: 2px solid #cfcfcf;
+}
+footer .container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+footer .footer__inner {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 70px;
+}
+footer .footer__inner .copyright {
+  grid-column: span 1;
+}
+footer .footer__inner .copyright h2 {
+  margin-top: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+footer .footer__inner .copyright h2 p {
+  display: inline-block;
+  color: #a96a71;
+}
+footer .footer__inner .copyright p {
+  margin-bottom: 15px;
+}
+footer .footer__inner .action {
+  grid-column: span 1;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+footer .footer__inner .action .info .row {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+footer .footer__inner .action .info .row a {
+  border-left: 3px solid #a96a71;
+  padding-left: 15px;
+}
+footer .footer__inner .action .btn-contact {
+  margin: 20px 20px 0 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  word-wrap: nowrap;
+}
+footer .footer__inner .action .btn-contact a button {
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  color: #f9fafb;
+  background-color: #854c53;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: 1px solid #cfcfcf;
+  letter-spacing: 1px;
+  transition: 0.2s;
+}
+footer .footer__inner .action .btn-contact a button:hover {
+  transition: 0.2s;
+  background-color: #a96a71;
+  letter-spacing: 2px;
+}
+footer .footer__inner .action .call {
+  margin-top: 30px;
+}
+footer .footer__inner .action .call p b {
+  font-weight: 700;
+  margin-right: 30px;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+.container {
+  max-width: 100%;
+  padding-inline: 80px;
+  margin: 0 auto;
+}
+
+.active {
+  display: block;
+}
+
+.tab-active {
+  font-size: 30px;
+  font-weight: 600;
+  color: #a96a71;
+  border-bottom: 3px solid #854c53 !important;
+  color: #854c53;
+  transition: 0.2s;
 }
 
 main {
@@ -517,86 +676,6 @@ main article section .film__item-desc .tag,
 main article section .film__item-desc .spending {
   font-size: 15px;
   line-height: 25px;
-}
-
-footer {
-  width: 100%;
-  height: 230px;
-  background-color: #f9fafb;
-  border-top: 2px solid #cfcfcf;
-}
-footer .container {
-  max-width: 80%;
-  margin: 0 auto;
-}
-footer .footer__inner {
-  margin-top: 30px;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 70px;
-}
-footer .footer__inner .copyright {
-  grid-column: span 1;
-}
-footer .footer__inner .copyright h2 {
-  margin-top: 20px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  font-size: 40px;
-}
-footer .footer__inner .copyright h2 p {
-  display: inline-block;
-  color: #a96a71;
-}
-footer .footer__inner .copyright p {
-  margin-bottom: 15px;
-}
-footer .footer__inner .action {
-  grid-column: span 1;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-}
-footer .footer__inner .action .info .row {
-  margin-top: 15px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-footer .footer__inner .action .info .row a {
-  border-left: 3px solid #a96a71;
-  padding-left: 15px;
-}
-footer .footer__inner .action .btn-contact {
-  margin: 20px 20px 0 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  word-wrap: nowrap;
-}
-footer .footer__inner .action .btn-contact a button {
-  width: 200px;
-  height: 50px;
-  cursor: pointer;
-  color: #f9fafb;
-  background-color: #854c53;
-  font-weight: 700;
-  font-size: 14px;
-  text-transform: uppercase;
-  border-radius: 10px;
-  border: 1px solid #cfcfcf;
-  letter-spacing: 1px;
-  transition: 0.2s;
-}
-footer .footer__inner .action .btn-contact a button:hover {
-  transition: 0.2s;
-  background-color: #a96a71;
-  letter-spacing: 2px;
-}
-footer .footer__inner .action .call {
-  margin-top: 30px;
-}
-footer .footer__inner .action .call p b {
-  font-weight: 700;
-  margin-right: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

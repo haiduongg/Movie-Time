@@ -25,42 +25,7 @@
   <body>
     <div class="page">
       <!-- Header -->
-      <header class="header">
-        <nav>
-          <div class="container header__inner">
-            <div class="header__inner-logo">
-              <a href="/"
-                ><img
-                  src="../../assets/img/header__logo.png"
-                  alt="Movie Time Logo"
-              /></a>
-            </div>
-
-            <div class="header__inner-search">
-              <i class="bx bx-search"></i>
-              <input type="text" name="search" placeholder="Search..." />
-            </div>
-
-            <div class="header__inner-navigation">
-              <ul class="header__inner-navigation-menu">
-                <li><a href="/">Trang chủ</a></li>
-                <li><a href="./products">Lịch chiếu phim</a></li>
-                <li><a href="about">Về chúng tôi</a></li>
-                <li><a href="pages">Pages</a></li>
-              </ul>
-
-              <ul class="header__inner-navigation-cart">
-                <li><a href="./orders">My Orders</a></li>
-                <li><a href="../Carts/Carts.html">Giỏ hàng</a></li>
-              </ul>
-
-              <div id="login">
-                <a href="../Login.html"> <i class="bx bx-user"></i>Login </a>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </header>
+      <header class="header" id="header"></header>
       <!-- Main -->
       <main>
         <div class="product container">
@@ -154,7 +119,8 @@
         </div>
       </footer>
     </div>
-    <script src="../../utils/AddCarts.js"></script>
+    <script src="../../utils/ProductUltil.js"></script>
+<script src="../../utils/Authentication/Logout.js"></script></script>
     <script src="../../utils/changeHeaderBg.js"></script>
   </body>
 </html>

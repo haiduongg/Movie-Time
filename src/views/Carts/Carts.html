@@ -25,13 +25,13 @@
   <body>
     <div class="page">
       <!-- Header -->
-      <header class="header">
+      <header class="header" id="header">
         <nav>
           <div class="container header__inner">
             <div class="header__inner-logo">
-              <a href="/"
+              <a href="./index.html"
                 ><img
-                  src="../../assets/img/header__logo.png"
+                  src="./src/assets/img/header__logo.png"
                   alt="Movie Time Logo"
               /></a>
             </div>
@@ -43,19 +43,50 @@
 
             <div class="header__inner-navigation">
               <ul class="header__inner-navigation-menu">
-                <li><a href="./">Trang chủ</a></li>
-                <li><a href="./products">Lịch chiếu phim</a></li>
-                <li><a href="./about">Về chúng tôi</a></li>
-                <li><a href="./pages">Pages</a></li>
+                <li><a href="/">Trang chủ</a></li>
+                <li><a href="#">Lịch chiếu phim</a></li>
+                <li>
+                  <a href="https://www.facebook.com/haiduong004"
+                    >Về chúng tôi</a
+                  >
+                </li>
               </ul>
 
-              <ul class="header__inner-navigation-cart">
-                <li><a href="./orders">My Orders</a></li>
-                <li><a href="./Carts.html">Giỏ hàng</a></li>
-              </ul>
+              <div class="header__inner-navigation-personal">
+                <div class="header__inner-navigation-personal-trigger">
+                  <img
+                    src="./src/assets/img/avatar.jpg"
+                    alt="avatar"
+                    width="40"
+                    height="40"
+                    class="header__inner-navigation-personal-trigger-avatar"
+                  />
+                  <span class="header__inner-navigation-personal-trigger-name"
+                    >Cao Hai Duong</span
+                  >
+                  <i class="bx bx-chevron-down"></i>
+                </div>
 
-              <div id="login">
-                <a href="../Login.html"> <i class="bx bx-user"></i>Login </a>
+                <div class="header__inner-navigation-personal-dropdown">
+                  <ul>
+                    <li>
+                      <a href="./src/views/Carts/Carts.html">Giỏ hàng</a>
+                    </li>
+                    <li id="logout">Đăng xuất</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="action">
+                <div id="login" class="button">
+                  <a href="./src/views/Login.html">
+                    <i class="bx bx-user"></i>Login
+                  </a>
+                </div>
+                <div id="signup" class="button">
+                  <a href="./src/views/Signup.html">
+                    <i class="bx bx-plus"></i>Signup
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -129,8 +160,17 @@
         </div>
       </footer>
     </div>
-    <script src="../../utils/AddCarts.js"></script>
+    <script src="../../utils/Authentication/Product.js"></script>
+    <script src="../../utils/ProductUltil.js"></script>
+<script src="../../utils/Authentication/Logout.js"></script></script>
     <script src="../../utils/changeHeaderBg.js"></script>
     <script src="../../utils/Carts.js"></script>
+    <script>
+      const btnLogout = document.getElementById('Logout');
+      btnLogout.addEventListener('click', () => {
+        localStorage.removeItem('isLogin');
+        window.location = '/';
+      });
+    </script>
   </body>
 </html>
