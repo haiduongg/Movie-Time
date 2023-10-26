@@ -3,17 +3,13 @@ const checkout = document.getElementById('icon');
 const deleteButton = document.getElementById('delete');
 console.log(films);
 
-// function deleteCart(index) {
-//   let news = films.splice(index - 1, 1);
-//   alert('Delete Successfully');
-//   RenderCarts(news);
-// }
-function deleteCart(id) {
-  let news = films.filter((film) => {
-    return film.id != id;
-  });
-  alert('Delete Successfully');
-  RenderCarts(news);
+function removeItem(id) {
+  let index = films.findIndex((x) => x.id == id);
+  if (index !== -1) {
+    films.splice(index, 1);
+  }
+  localStorage.setItem('Carts', JSON.stringify(films));
+  RenderCarts(films);
 }
 
 function changeQuantity(index, quantity) {
@@ -56,7 +52,7 @@ function RenderCarts(films) {
                       <p>${new Intl.NumberFormat().format(
                         film.quantity * film.price
                       )}đ</p>
-                      <i id="delete" class='bx bxs-x-square' onclick="deleteCart(${
+                      <i id="delete" class='bx bxs-x-square' onclick="removeItem(${
                         film.id
                       })"></i>
                     </div>
