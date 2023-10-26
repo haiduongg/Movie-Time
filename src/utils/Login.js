@@ -7,10 +7,10 @@ showIcon.addEventListener('click', () => {
   if (
     document.getElementById('show-icon').getAttribute('class') === 'bx bx-show'
   ) {
-    document.getElementById('password').setAttribute('type', 'password');
+    document.getElementById('password').setAttribute('type', 'text');
     document.getElementById('show-icon').setAttribute('class', 'bx bx-hide');
   } else {
-    document.getElementById('password').setAttribute('type', 'text');
+    document.getElementById('password').setAttribute('type', 'password');
     document.getElementById('show-icon').setAttribute('class', 'bx bx-show');
   }
 });
