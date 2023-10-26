@@ -58,6 +58,17 @@ form {
         border-bottom: 3px solid $clr-primary;
       }
     }
+    .input-password {
+      position: relative;
+    }
+    #show-icon {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      right: 5%;
+      font-size: 25px;
+      opacity: 0.7;
+    }
     #login {
       @include flex(center, center);
       border-radius: 10px;

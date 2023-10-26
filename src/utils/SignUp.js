@@ -1,4 +1,6 @@
 let signup = document.getElementById('signup');
+let showPwIcon = document.getElementById('show-password-icon');
+let showCfIcon = document.getElementById('show-confirm-icon');
 
 function Customer(id, username, email, phoneNumber, password) {
   this.id = id;
@@ -7,6 +9,42 @@ function Customer(id, username, email, phoneNumber, password) {
   this.phoneNumber = phoneNumber;
   this.password = password;
 }
+
+showPwIcon.addEventListener('click', () => {
+  if (
+    document.getElementById('show-password-icon').getAttribute('class') ===
+    'bx bx-show show-icon'
+  ) {
+    document.getElementById('password').setAttribute('type', 'text');
+    document
+      .getElementById('show-password-icon')
+      .setAttribute('class', 'bx bx-hide show-icon');
+  } else {
+    document.getElementById('password').setAttribute('type', 'password');
+    document
+      .getElementById('show-password-icon')
+      .setAttribute('class', 'bx bx-show show-icon');
+  }
+});
+
+showCfIcon.addEventListener('click', () => {
+  if (
+    document.getElementById('show-confirm-icon').getAttribute('class') ===
+    'bx bx-show show-icon'
+  ) {
+    document.getElementById('confirm-password').setAttribute('type', 'text');
+    document
+      .getElementById('show-confirm-icon')
+      .setAttribute('class', 'bx bx-hide show-icon');
+  } else {
+    document
+      .getElementById('confirm-password')
+      .setAttribute('type', 'password');
+    document
+      .getElementById('show-confirm-icon')
+      .setAttribute('class', 'bx bx-show show-icon');
+  }
+});
 
 signup.addEventListener('click', () => {
   let userData = JSON.parse(localStorage.getItem('userData')) || [];

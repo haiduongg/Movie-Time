@@ -203,6 +203,40 @@ body {
 .changeBackground nav .header__inner-navigation-cart li:last-child {
   border-left: 1px solid #cfcfcf;
 }
+.changeBackground nav .header__inner-navigation-personal {
+  position: relative;
+}
+.changeBackground nav .header__inner-navigation-personal-trigger {
+  cursor: pointer;
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-wrap: nowrap;
+  padding-block: 10px;
+}
+.changeBackground nav .header__inner-navigation-personal-trigger-avatar {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.changeBackground nav .header__inner-navigation-personal-dropdown {
+  color: #5d6673;
+  position: absolute;
+  border-radius: 10px;
+  top: 100%;
+  left: 30px;
+  width: 200px;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.changeBackground nav .header__inner-navigation-personal-dropdown ul {
+  font-size: 17px;
+  padding: 15px 0 20px 20px;
+}
+.changeBackground nav .header__inner-navigation-personal-dropdown ul > li {
+  cursor: pointer;
+  padding: 10px;
+}
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -305,6 +339,17 @@ form .form__inner input:focus {
   outline: none;
   transition: 0.2s;
   border-bottom: 3px solid #a96a71;
+}
+form .form__inner .input-password {
+  position: relative;
+}
+form .form__inner .show-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  right: 5%;
+  font-size: 25px;
+  opacity: 0.7;
 }
 form .form__inner #signup {
   border-radius: 10px;
